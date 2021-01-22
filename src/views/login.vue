@@ -150,14 +150,13 @@ export default {
   
 
          this.state.loginBtn = true;
-         let res = await this.Request.post(this, "/api/auth/login", {
+         let res = await this.Request.post(this, "/api-admin/auth/login", {
           username: this.account,
           password: this.password
         }); 
 
         let menuArray = [];
         if(res.user.menuList){
-          console.info(res.user.menuList)
             res.user.menuList.forEach(menu=>{
                   if(menu.module){
                      menuArray.push(menu.module);

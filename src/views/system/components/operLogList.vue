@@ -99,7 +99,7 @@ export default {
         // 调用日志查询接口，查询日志列表，接收返回数据
         getDataSource() { 
             this.loading = true;
-            this.currentFilter.start = this.pagination.current;
+            this.currentFilter.current = this.pagination.current;
             this.currentFilter.limit = this.pagination.pageSize;
             GET(this,this.url,this.currentFilter, res => {
                 if(res.code && res.code == '200') {

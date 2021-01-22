@@ -225,10 +225,10 @@
                     modelName: 'user',
                     beforeLoadType:"get",
                     url:{
-                        list:"/api/role/getRoleList",
-                        create: '/api/role/saveRole',
-                        update:"/api/role/updateRole",
-                        delete:"/api/role/deleteRole",
+                        list:"/api-admin/role/getRoleList",
+                        create: '/api-admin/role/saveRole',
+                        update:"/api-admin/role/updateRole",
+                        delete:"/api-admin/role/deleteRole",
                     },
                    columns: [
                          {       

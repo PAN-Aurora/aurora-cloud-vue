@@ -229,10 +229,10 @@
                     modelName: 'user',
                     beforeLoadType:"get",
                     url:{
-                        list:"/api/user/getUserList",
-                        create: '/api/user/saveUser',
-                        update:"/api/user/updateUser",
-                        delete:"/api/user/deleteUser",
+                        list:"/api-admin/user/getUserList",
+                        create: '/api-admin/user/saveUser',
+                        update:"/api-admin/user/updateUser",
+                        delete:"/api-admin/user/deleteUser",
                     },
                     columns: [
                           {       
@@ -457,7 +457,7 @@
                     current:1,
                     limit:10000
                 }
-                GET(this, '/api/role/getRoleList', params, (res) => {
+                GET(this, '/api-admin/role/getRoleList', params, (res) => {
                     let proColumn = this.gridOption.columns[4]
                     if (res.code === 200) {
                         this.roleList = res.data.list.map((role) => {

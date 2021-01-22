@@ -53,6 +53,22 @@ module.exports = {
     //     }
     // }, 
     proxy: { //代理地址 可配置多个
+      '/api-admin': {
+        target: 'http://192.168.109.99:1000',
+        ws: false,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api-admin': '/api/api-1200'
+        }
+      },
+      '/api-logger': {
+        target: 'http://192.168.109.99:1000',
+        ws: false,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api-logger': '/api/api-1500'
+        }
+      },
       '/api': {
         target: 'http://127.0.0.1:8081',
         ws: false,
@@ -60,7 +76,7 @@ module.exports = {
         pathRewrite: {
           '^/api': '/aurora-web/api'
         }
-      }
+      },
     },
     before: app => { }
   }

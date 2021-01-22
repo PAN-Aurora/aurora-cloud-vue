@@ -39,10 +39,12 @@ axios.interceptors.request.use(
         config.headers['Content-Type'] = 'application/json;charset=UTF-8';
         //config.headers['Authorization'] = 'Bearer ' + token;
         if(token){
-            config.headers['Authorization'] ="Bearer "+ token;
+            //config.headers['Authorization'] ="Bearer "+ token;
+            config.headers['Authorization'] =token;
 
         }else{
-            config.headers['Authorization'] ="Bearer ";
+            //config.headers['Authorization'] ="Bearer ";
+            config.headers['Authorization'] ="";
         }
         //判断是否存在ticket，如果存在的话，则每个http header都加上ticket
 

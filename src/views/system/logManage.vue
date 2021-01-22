@@ -58,7 +58,7 @@
                             dataIndex: 'logCreateTime'
                         }],
                         urls:{
-                            operUrl:'/api/log/getLogList'
+                            operUrl:'/api-admin/logger/getLogList'
                         }
                  }
         },
